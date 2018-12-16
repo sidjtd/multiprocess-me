@@ -51,7 +51,11 @@ def scrape_func(input, output):
                 QUEUE_PROCESS.put(a_link)
                 MASTER_LIST.add(a_link)
                 QUEUE_COMPLETED.put(a_link)
-                
+        
+    print('*'*20)
+    print('\nCompleted: ')
+    for each in MASTER_LIST:
+        print(each)
 
 
 def start_multi(arg):
